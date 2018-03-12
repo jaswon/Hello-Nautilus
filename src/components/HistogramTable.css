@@ -1,0 +1,19 @@
+#hist-table {
+  margin: 20px;
+  border-collapse: collapse;
+}
+
+td {
+  font-family: monospace;
+  padding: 5px;
+  width: 30px; 
+  text-align: center;
+}
+
+#hist-table thead td {
+  border-bottom: solid 1px;
+}
+
+#hist-table .heading {
+  border-right: solid 1px;
+}

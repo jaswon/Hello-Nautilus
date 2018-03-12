@@ -1,7 +1,7 @@
-#hist-data {
+#hist-wrapper {
   margin: 10px;
 }
 
-table, th, td {
-  border: solid 1px;
+#hist-display-container {
+  margin-top: 20px;
 }
