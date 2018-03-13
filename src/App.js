@@ -8,9 +8,11 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    // state contains user string
     this.state =  { data: "The quick brown fox jumps over the lazy programmer"}
   }
 
+  // state also contains width of screen for dynamic resizing
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions.bind(this));
@@ -24,6 +26,7 @@ class App extends Component {
     this.setState({ width: window.innerWidth });
   }
 
+  // on user input
   handleDataChange (data) {
     this.setState({ data })
   }

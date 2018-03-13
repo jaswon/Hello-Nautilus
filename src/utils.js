@@ -1,3 +1,4 @@
+// generate character frequency data
 function genHistogram (data) {
   let hist = {}
   let c;
@@ -8,6 +9,7 @@ function genHistogram (data) {
   return hist
 }
 
+// reverse a string
 function reverseString (data) {
   return data.split('').reverse().join('')
 }

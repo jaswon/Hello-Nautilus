@@ -30,11 +30,13 @@ class Histogram extends Component {
   }
 
   render () {
+    // generate character frequency data, and sort according to sortMode
     let hist = Object.entries(genHistogram(this.props.data))
       .sort( this.state.sortMode === "character"
         ? (a,b) => a[0].localeCompare(b[0])
         : (a,b) => b[1] - a[1]
       )
+    // determine whether the display should be wide or tall (depending on screen width)
     let horiz = this.props.width > hist.length * 45 + 200
     return (
       <div id="hist-wrapper">
@@ -74,8 +76,11 @@ class Histogram extends Component {
           /> Frequency
         </label>
         <div id="hist-display-container">
-          { (this.state.displayMode === "table") && <HistogramTable data={hist} horiz={horiz} /> }  
-          { (this.state.displayMode === "graph") && <BarGraph data={hist} horiz={horiz} /> }
+          { (this.state.displayMode === "table") ? (
+            <HistogramTable data={hist} horiz={horiz} />
+          ) : (
+            <BarGraph data={hist} horiz={horiz} />
+          ) }
         </div>
       </div>
     );

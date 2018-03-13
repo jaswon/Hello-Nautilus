@@ -5,11 +5,13 @@ import './BarGraph.css';
 class BarGraph extends Component {
   render () {
     let data = this.props.data
+    // largest element in bar graph data (to normalize)
     let largest = data.reduce( (acc,cur) => Math.max(acc, cur[1]), 1)
     return (
       <div className="graph-wrapper">
         {
-          (this.props.horiz) ? (
+          // depending on if the graph should be wider or taller
+          (this.props.horiz) ? ( // bars are vertical
             <table className="graph horiz"><tbody>
               <tr >
                 { data.map( ([k,v]) => (
@@ -26,7 +28,7 @@ class BarGraph extends Component {
                 ) ) } 
               </tr>
             </tbody></table>
-          ) : (
+          ) : ( // bars are horizontal
             <table className="graph vert">
               { data.map( ([k,v]) => (
                 <tr >
