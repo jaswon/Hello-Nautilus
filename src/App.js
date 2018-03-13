@@ -8,7 +8,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state =  { data: "The quick brown fox jumps over the lazy dog!" }
+    this.state =  { data: "The quick brown fox jumps over the lazy programmer"}
   }
 
   componentDidMount() {

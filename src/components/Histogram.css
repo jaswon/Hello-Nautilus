@@ -9,6 +9,7 @@
   right:0;
   display:flex;
   justify-content: center;
+  padding-bottom: 30vh;
 }
 
 #hist-wraper label {

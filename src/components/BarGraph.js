@@ -13,7 +13,11 @@ class BarGraph extends Component {
             <table className="graph horiz">
               <tr >
                 { data.map( ([k,v]) => (
-                  <td className="bar-wrapper"><div className="bar" style={{ height: `${v/largest*100}%` }}>{v}</div></td>
+                  <td className="bar-wrapper">
+                    <div className="bar" style={{ height: `${v/largest*100}%` }}>
+                      <div className="num">{v}</div>
+                    </div>
+                  </td>
                 ) ) } 
               </tr>
               <tr>
@@ -26,8 +30,11 @@ class BarGraph extends Component {
             <table className="graph vert">
               { data.map( ([k,v]) => (
                 <tr key={k}>
-                  <td>'{k}'</td>
-                  <td className="bar-wrapper"><div className="bar" style={{ width: `${v/largest*100}%` }}>{v}</div></td>
+                  <td><span>'{k}'</span></td>
+                  <td className="bar-wrapper">
+                    <div className="bar" style={{ width: `${v/largest*100}%` }}></div>
+                    <div className="num">{ v }</div>
+                  </td>
                 </tr>
               ) ) }
             </table>
