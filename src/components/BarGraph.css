@@ -19,7 +19,7 @@ table.graph.horiz .bar {
   border-radius: 2px;
   text-align: center;
   color: white;
-  background-color: #e99;
+  background-color: #4E72F7;
 }
 
 table.graph.vert tr {
@@ -37,6 +37,6 @@ table.graph.vert .bar {
   border-radius: 2px;
   text-align: left;
   color: white;
-  background-color: #e99;
+  background-color: #4E72F7;
 }
 
