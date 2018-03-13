@@ -10,4 +10,4 @@ then visit `http://localhost:5000`.
 
 --- 
 
-Alternatively visit `http://jaswon.tech/Hello-Nautilus/index.html`
+Alternatively visit [http://jaswon.tech/Hello-Nautilus/build/](http://jaswon.tech/Hello-Nautilus/build/)
