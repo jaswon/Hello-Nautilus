@@ -1,3 +1,7 @@
+table.graph .bar {
+  transition: .2s all;
+}
+
 table.graph.horiz {
   height: 300px;
   margin: 0;

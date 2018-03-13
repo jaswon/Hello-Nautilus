@@ -10,10 +10,10 @@ class BarGraph extends Component {
       <div className="graph-wrapper">
         {
           (this.props.horiz) ? (
-            <table className="graph horiz">
+            <table className="graph horiz"><tbody>
               <tr >
                 { data.map( ([k,v]) => (
-                  <td className="bar-wrapper">
+                  <td className="bar-wrapper" key={k} >
                     <div className="bar" style={{ height: `${v/largest*100}%` }}>
                       <div className="num">{v}</div>
                     </div>
@@ -22,10 +22,10 @@ class BarGraph extends Component {
               </tr>
               <tr>
                 { data.map( ([k,v]) => (
-                  <td>'{k}'</td>
+                  <td key={k} >'{k}'</td>
                 ) ) } 
               </tr>
-            </table>
+            </tbody></table>
           ) : (
             <table className="graph vert">
               { data.map( ([k,v]) => (
