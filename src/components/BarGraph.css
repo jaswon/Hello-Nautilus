@@ -3,16 +3,40 @@ table.graph {
   margin: 0;
 }
 
-table.graph .bar-wrapper {
+table.graph td {
+  font-family: monospace;
+}
+
+table.graph.horiz .bar-wrapper {
   height: 400px;
   width: 30px;
   vertical-align: bottom;
+  padding: 4px;
 }
 
-table.graph .bar {
-  padding: 5px;
+table.graph.horiz .bar {
+  padding: 8px;
   border-radius: 2px;
   text-align: center;
   color: white;
   background-color: #e99;
 }
+
+table.graph.vert tr {
+  height: 20px;
+}
+
+table.graph.vert .bar-wrapper {
+  width: 400px;
+  height: 20px;
+  padding: 5px;
+}
+
+table.graph.vert .bar {
+  padding: 4px;
+  border-radius: 2px;
+  text-align: left;
+  color: white;
+  background-color: #e99;
+}
+

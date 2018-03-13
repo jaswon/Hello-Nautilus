@@ -8,18 +8,31 @@ class BarGraph extends Component {
     let largest = data.reduce( (acc,cur) => Math.max(acc, cur[1]), 1)
     return (
       <div className="graph-wrapper">
-        <table className="graph">
-          <tr >
-            { data.map( ([k,v]) => (
-              <td className="bar-wrapper"><div className="bar" style={{ height: `${v/largest*100}%` }}>{v}</div></td>
-            ) ) } 
-          </tr>
-          <tr>
-            { data.map( ([k,v]) => (
-              <td>'{k}'</td>
-            ) ) } 
-          </tr>
-        </table>
+        {
+          (this.props.horiz) ? (
+            <table className="graph horiz">
+              <tr >
+                { data.map( ([k,v]) => (
+                  <td className="bar-wrapper"><div className="bar" style={{ height: `${v/largest*100}%` }}>{v}</div></td>
+                ) ) } 
+              </tr>
+              <tr>
+                { data.map( ([k,v]) => (
+                  <td>'{k}'</td>
+                ) ) } 
+              </tr>
+            </table>
+          ) : (
+            <table className="graph vert">
+              { data.map( ([k,v]) => (
+                <tr key={k}>
+                  <td>'{k}'</td>
+                  <td className="bar-wrapper"><div className="bar" style={{ width: `${v/largest*100}%` }}>{v}</div></td>
+                </tr>
+              ) ) }
+            </table>
+          )
+        }
       </div>
     );
   }

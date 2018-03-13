@@ -4,4 +4,13 @@
 
 #hist-display-container {
   margin-top: 20px;
+  position: absolute;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content: center;
+}
+
+#hist-wraper label {
+  margin-left: 10px;
 }

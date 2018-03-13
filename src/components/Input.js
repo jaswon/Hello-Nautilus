@@ -12,7 +12,7 @@ class Input extends Component {
         <span>Enter some text: </span>
         <input 
           type="text" 
-          onInput={this.handleInput.bind(this)}
+          onChange={this.handleInput.bind(this)}
           value={this.props.value} ></input>
       </div>
     );

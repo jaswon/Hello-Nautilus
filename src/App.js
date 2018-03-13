@@ -8,7 +8,20 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state =  { data: "" }
+    this.state =  { data: "The quick brown fox jumps over the lazy dog!" }
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions.bind(this));
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth });
   }
 
   handleDataChange (data) {
@@ -21,7 +34,7 @@ class App extends Component {
         <h1>Hello Nautilus!</h1>
         <Input onInput={this.handleDataChange.bind(this)} value={this.state.data} />
         <Reverse data={this.state.data} />
-        <Histogram data={this.state.data} />
+        <Histogram data={this.state.data} width={this.state.width} />
       </div>
     );
   }
