@@ -1,3 +1,3 @@
 # Hello Nautilus!
 
-visit `https://jaswon.tech/Hello-Nautilus/`
+visit `https://jaswon.tech/Hello-Nautilus/build/`
